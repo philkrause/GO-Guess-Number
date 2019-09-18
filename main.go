@@ -7,16 +7,14 @@ func main() {
 	var ai int32 = 50
 	var max int32 = 100
 	var min int32 = 0
-	var message = fmt.Sprintf("Is your number %d Enter higher, lower, or yes\n", AI)
-
-	input := ""
+	var input string = ""
+	var message = fmt.Sprintf("Is your number %d Enter higher, lower, or yes\n", ai)
 
 	fmt.Println("The Number Guesser in GO!")
 	fmt.Println(message)
 
 	for input != "yes" {
 
-		mem = message
 		fmt.Scanln(&input)
 		fmt.Println(message)
 
