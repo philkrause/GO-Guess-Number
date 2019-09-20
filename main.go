@@ -1,22 +1,29 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 func main() {
 
+	guessNumber()
+
+}
+
+func guessNumber() {
+
+	fmt.Println("Pick a number between 0 - 100.")
 	var ai int32 = 50
-	var max int32 = 100
+	var max int32 = 101
 	var min int32 = 0
 	var input string = ""
-	var message = fmt.Sprintf("Is your number %d Enter higher, lower, or yes\n", ai)
-
-	fmt.Println("The Number Guesser in GO!")
-	fmt.Println(message)
+	var message string = ""
 
 	for input != "yes" {
 
-		fmt.Scanln(&input)
+		message = fmt.Sprintf("Is your number %v ? Enter higher, lower, or yes\n", ai)
 		fmt.Println(message)
+		fmt.Scanln(&input)
 
 		if input == "higher" {
 			min = ai
@@ -29,5 +36,4 @@ func main() {
 			fmt.Println("A.I. wins again")
 		}
 	}
-
 }
